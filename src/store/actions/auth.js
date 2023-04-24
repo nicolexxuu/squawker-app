@@ -3,7 +3,7 @@ import { SET_CURRENT_USER } from "../actionTypes";
 import { ADD_ERROR, REMOVE_ERROR, removeError, addError } from "./errors";
 
 export function setCurrentUser(user) {
-    console.log("setting current user to " + user);
+    // console.log("setting current user to " + user);
     return {
         type: SET_CURRENT_USER,
         user

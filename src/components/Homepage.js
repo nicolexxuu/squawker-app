@@ -98,7 +98,7 @@ export default function Homepage({ currentUser }) {
 
         )
     }
-    console.log("authenticated, user is " + currentUser);
+    // console.log("authenticated, user is " + currentUser);
     return (
         <div className="mx-auto max-w-3xl">
             <MessageTimeline profileImageUrl={currentUser.user.profileImageUrl} username={currentUser.user.username} />

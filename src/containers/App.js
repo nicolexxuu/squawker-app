@@ -12,7 +12,7 @@ if (localStorage.jwtToken) {
 
   try {
     setAuthorizationToken(localStorage.jwtToken);
-    console.log("rehydrating state with token " + localStorage.jwtToken);
+    // console.log("rehydrating state with token " + localStorage.jwtToken);
     store.dispatch(setCurrentUser(jwtDecode(localStorage.jwtToken)));
   } catch (e) {
     // store.dispatch(setCurrentUser({}));

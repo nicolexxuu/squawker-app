@@ -35,7 +35,7 @@ class MessageList extends Component {
 }
 
 function mapStateToProps(state) {
-    console.log("current user in map: " + state.currentUser.user.id);
+    // console.log("current user in map: " + state.currentUser.user.id);
     return {
         messages: state.messages,
         currentUser: state.currentUser.user.id
