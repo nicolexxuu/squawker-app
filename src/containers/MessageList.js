@@ -6,9 +6,6 @@ import MessageItem from "../components/MessageItem"
 class MessageList extends Component {
     componentDidMount() {
         this.props.fetchMessages();
-        // this.props.messages.forEach((message) => {
-        //     console.log("message in list: " + message.user);
-        // })
     }
 
     render() {
