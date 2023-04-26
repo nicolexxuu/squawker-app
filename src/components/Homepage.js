@@ -9,6 +9,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 
 export default function Homepage({ currentUser }) {
+    console.log("homepage user: " + currentUser.user.username)
     if (!currentUser.isAuthenticated) {
         return (
             <div className="bg-white ">

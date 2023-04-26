@@ -9,7 +9,6 @@ import jwtDecode from "jwt-decode";
 const store = configureStore();
 
 if (localStorage.jwtToken) {
-
   try {
     setAuthorizationToken(localStorage.jwtToken);
     // console.log("rehydrating state with token " + localStorage.jwtToken);

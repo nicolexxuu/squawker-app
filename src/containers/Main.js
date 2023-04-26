@@ -16,7 +16,7 @@ import MessageForm from "../containers/MessageForm";
 const Main = props => {
     const { authUser, errors, removeError, currentUser } = props;
     const MessageFormWithAuth = withAuth(MessageForm);
-    // console.log("main user: " + currentUser + " id: " + Object.keys(currentUser));
+
     return (
         <div className="z-0">
             <Routes>

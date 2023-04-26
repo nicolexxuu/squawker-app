@@ -9,7 +9,6 @@ export function setTokenHeader(token) {
 }
 
 export function apiCall(method, path, data) {
-    if (data) console.log("method: " + method + " data: " + Object.keys(data));
     return new Promise((resolve, reject) => {
         return axios[method](path, data)
             .then(res => {
