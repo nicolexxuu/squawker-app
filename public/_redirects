@@ -1,3 +1,6 @@
-/api https://squawker-server.herokuapp.com/
+/api/* https://squawker-server.herokuapp.com/:splat 200!
+/* /index.html  200
+
+# /api https://squawker-server.herokuapp.com/
 
 # /api/* https://domain.herokuapp.com/api/:splat 200 /* /index.html 200
