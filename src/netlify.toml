@@ -1,0 +1,4 @@
+[[redirects]]
+    from = "/"
+    to = "https://squawker-server.herokuapp.com"
+    status = 200
