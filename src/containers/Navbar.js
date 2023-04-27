@@ -1,5 +1,5 @@
-import React, { Component, useState } from "react";
-import { Route, Link } from "react-router-dom";
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { logout } from "../store/actions/auth";
 import { Dialog } from "@headlessui/react";
@@ -9,7 +9,6 @@ const navigation = [
     { name: 'sign up', to: "/signup" },
     { name: 'log in', to: "/signin" }
 ]
-// const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 class Navbar extends Component {
     constructor(props) {
@@ -42,7 +41,7 @@ class Navbar extends Component {
     }
 
     render() {
-        return <header className="inset-x-0 z-50 absolute">
+        return <header className="absolute top-0 inset-x-0 z-50">
             <nav className="flex items-center justify-between p-6 lg:px-8 z-50" aria-label="Global" >
                 <div className="flex lg:flex-1 ">
                     <Link to="/" className="-m-1.5 p-1.5">

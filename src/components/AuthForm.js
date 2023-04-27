@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import errors from "../store/reducers/errors";
-// import { useNavigate } from "react-router-dom";
-// import 
 
 export default class AuthForm extends Component {
 
@@ -15,7 +13,6 @@ export default class AuthForm extends Component {
         }
     }
 
-    // const navigate = useNavigate();
     handleChange = e => {
         this.setState({
             [e.target.name]: e.target.value
@@ -34,7 +31,7 @@ export default class AuthForm extends Component {
 
     render() {
         const { email, username, password, profileImageUrl } = this.state;
-        const { heading, buttonText, signUp, errors, history, removeError } = this.props;
+        const { heading, buttonText, signUp, errors, removeError } = this.props;
 
         if (errors.message === "Sorry, that username and/or email is taken"
             && signUp === undefined) {

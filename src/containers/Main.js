@@ -1,6 +1,6 @@
 import React from "react";
 import {
-    Routes, Route, Redirect,
+    Routes, Route,
     useLocation,
     useNavigate,
     useParams,
@@ -18,7 +18,7 @@ const Main = props => {
     const MessageFormWithAuth = withAuth(MessageForm);
 
     return (
-        <div className="z-0">
+        <div className="relative isolate px-6 pt-14 lg:px-8">
             <Routes>
                 <Route exact path="/" element={<Homepage currentUser={currentUser} {...props} />} />
                 <Route exact path="/signin" element={
