@@ -48,8 +48,7 @@ export default function Homepage({ currentUser }) {
                             what's happening?
                         </h1>
                         <p className="mt-6 text-lg leading-8 text-gray-600">
-                            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-                            fugiat veniam occaecat fugiat aliqua.
+                            This web app is basically a clone of Twitter. Pretend this says something important. Blah blah blah. Blah blah blah.
                         </p>
                         <div className="mt-10 flex items-center justify-center gap-x-6">
 

@@ -27,7 +27,7 @@ const Main = props => {
                         removeError={removeError}
                         onAuth={authUser}
                         buttonText="log in"
-                        heading="welcome back"
+                        heading="welcome back!"
                         {...props} //?
                     />
                 } />
@@ -38,7 +38,7 @@ const Main = props => {
                         onAuth={authUser}
                         signUp
                         buttonText="sign up"
-                        heading="welcome"
+                        heading="sign up for an account"
                         {...props}
                     />
                 } />
