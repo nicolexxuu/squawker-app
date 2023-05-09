@@ -14,7 +14,8 @@ const navigation = [
 class Navbar extends Component {
     constructor(props) {
         super(props);
-        this.state = { mobileMenuOpen: false, setMobileMenuOpen: false };
+        this.state = { mobileMenuOpen: false, setMobileMenuOpen: false }
+            ;
     }
 
     // render() {
