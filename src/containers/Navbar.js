@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { logout } from "../store/actions/auth";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import LogoImg from "../images/squawker-logo.jpg";
 
 const navigation = [
     { name: 'sign up', to: "/signup" },
@@ -48,7 +49,7 @@ class Navbar extends Component {
                         <span className="sr-only">Your Company</span>
                         <img
                             className="h-8 w-auto"
-                            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                            src={LogoImg}
                             alt=""
                         />
 
@@ -98,7 +99,7 @@ class Navbar extends Component {
                             <span className="sr-only">Your Company</span>
                             <img
                                 className="h-8 w-auto"
-                                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                                src={LogoImg}
                                 alt=""
                             />
                         </a>

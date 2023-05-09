@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import LogoImg from "../images/squawker-logo.jpg";
 import errors from "../store/reducers/errors";
 
 export default class AuthForm extends Component {
@@ -44,7 +45,7 @@ export default class AuthForm extends Component {
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                     <img
                         className="mx-auto h-10 w-auto"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                        src={LogoImg}
                         alt="Your Company"
                     />
                     <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
@@ -55,9 +56,10 @@ export default class AuthForm extends Component {
                 <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
                     <form className={signUp ? "space-y-2" : "space-y-4"} onSubmit={this.handleSubmit}>
                         {errors.message && <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">{errors.message}</div>}
+
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
-                                email address
+                                email address {signUp && <span class="text-red-600">*</span>}
                             </label>
                             <div className="mt-2">
                                 <input
@@ -68,7 +70,7 @@ export default class AuthForm extends Component {
                                     type="text"
                                     // type="email"
                                     // autoComplete="email"
-                                    // required
+                                    required
                                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 />
                             </div>
@@ -76,7 +78,7 @@ export default class AuthForm extends Component {
 
                         <div>
                             <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
-                                password
+                                password {signUp && <span class="text-red-600">*</span>}
                             </label>
                             <div className="mt-2">
                                 <input
@@ -85,7 +87,7 @@ export default class AuthForm extends Component {
                                     type="password"
                                     onChange={this.handleChange}
                                     // autoComplete="current-password"
-                                    // required
+                                    required
                                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 />
                             </div>
@@ -94,7 +96,7 @@ export default class AuthForm extends Component {
                         {signUp && (
                             <div>
                                 <label htmlFor="username" className="block text-sm font-medium leading-6 text-gray-900">
-                                    username
+                                    username {signUp && <span class="text-red-600">*</span>}
                                 </label>
                                 <div className="mt-2">
                                     <input
@@ -105,7 +107,7 @@ export default class AuthForm extends Component {
                                         type="text"
                                         // type="email"
                                         // autoComplete="email"
-                                        // required
+                                        required
                                         className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                     />
                                 </div>
@@ -126,7 +128,6 @@ export default class AuthForm extends Component {
                                         type="text"
                                         // type="email"
                                         // autoComplete="email"
-                                        // required
                                         className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                     />
                                 </div>
