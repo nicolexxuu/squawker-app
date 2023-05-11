@@ -2,10 +2,9 @@ import React from "react";
 import Moment from "react-moment";
 import { Link } from "react-router-dom";
 import DefaultProfileImg from "../images/default-profile-image.jpg";
-import { TrashIcon } from '@heroicons/react/24/outline';
 
 
-const MessageItem = ({ date, profileImageUrl, text, imageUrl, username, removeMessage, isCorrectUser }) => (
+const MessageItem = ({ messageId, userId, date, profileImageUrl, text, imageUrl, username, removeMessage, editMessage, isCorrectUser }) => (
     <li className="flex items-center space-x-3 py-1">
         <img
             className="inline-block h-10 w-10 rounded-full ring-2 ring-white"
@@ -22,11 +21,20 @@ const MessageItem = ({ date, profileImageUrl, text, imageUrl, username, removeMe
 
             <p>{text}</p>
             {isCorrectUser && (
-                <div className="relative rounded-full px-3 text-sm leading-6 ring-1 text-gray-400 hover:text-gray-600">
-                    <a onClick={removeMessage} className="font-semibold cursor-pointer">
-                        <span className="absolute inset-0" aria-hidden="true" />
-                        delete
-                    </a>
+                <div className="space-x-2">
+
+                    <span className="relative rounded-full px-3 text-sm leading-6 ring-1 text-gray-400 hover:text-gray-600 cursor-pointer">
+                        <a onClick={removeMessage} className="font-semibold">
+                            <span className="absolute inset-0" aria-hidden="true" />
+                            delete
+                        </a>
+                    </span>
+                    <span className="relative rounded-full px-3 text-sm leading-6 ring-1 text-gray-400 hover:text-gray-600 cursor-pointer">
+                        <Link to={`/users/${userId}/messages/${messageId}/edit`} state={{ messageId, userId, text, imageUrl }} className="font-semibold">
+                            <span className="absolute inset-0" aria-hidden="true" />
+                            edit
+                        </Link>
+                    </span>
                 </div>
             )}
         </div>

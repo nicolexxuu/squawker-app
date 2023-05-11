@@ -41,3 +41,9 @@ export const postNewMessage = (text, url) => (dispatch, getState) => {
         .then(res => { })
         .catch(err => dispatch(addError(err.message)))
 };
+
+export const editMessage = (user_id, message_id, text, url) => (dispatch, getState) => {
+    return apiCall("put", `/api/users/${user_id}/messages/${message_id}`, { text, url })
+        .then(res => { })
+        .catch(err => dispatch(addError(err.message)))
+}

@@ -14,27 +14,8 @@ const navigation = [
 class Navbar extends Component {
     constructor(props) {
         super(props);
-        this.state = { mobileMenuOpen: false, setMobileMenuOpen: false }
-            ;
+        this.state = { mobileMenuOpen: false, setMobileMenuOpen: false };
     }
-
-    // render() {
-    // return <nav className="navbar navbar-expand text-rose-500">
-    //     <div className="container-fluid">
-    //         <Link to="/" className="navbar-brand">
-    //             <img src="" alt="homepage img" />
-    //         </Link>
-    //     </div>
-
-    //     <ul>
-    //         <li>
-    //             <Link to="/signup">sign up</Link>
-    //         </li>
-    //         <li>
-    //             <Link to="/signin">log in</Link>
-    //         </li>
-    //     </ul>
-    // </nav>
 
     logout = e => {
         e.preventDefault();

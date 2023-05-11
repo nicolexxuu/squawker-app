@@ -12,10 +12,11 @@ import { authUser } from "../store/actions/auth";
 import { removeError } from "../store/actions/errors";
 import withAuth from "../hocs/withAuth";
 import MessageForm from "../containers/MessageForm";
+import EditForm from "../containers/EditForm";
 
 const Main = props => {
     const { authUser, errors, removeError, currentUser } = props;
-    const MessageFormWithAuth = withAuth(MessageForm);
+    const MessageFormWithAuth = withAuth(MessageForm), EditFormWithAuth = withAuth(EditForm);
 
     return (
         <div className="relative isolate px-6 pt-14 lg:px-8">
@@ -45,6 +46,11 @@ const Main = props => {
                 <Route
                     exact path="users/:id/messages/new"
                     element={<MessageFormWithAuth {...props} />}
+                />
+
+                <Route
+                    exact path="users/:id/messages/:message_id/edit"
+                    element={<EditFormWithAuth {...props} />}
                 />
             </Routes>
         </div >
